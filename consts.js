@@ -1,13 +1,13 @@
 /* TODO */
 export class Cloud {
-  static PROJECT_ID = "";
-  static PROJECT_LOCATION = "";
-  static KEY_FILE_PATH = "";
+  static PROJECT_ID = "food-delivery-459601";
+  static PROJECT_LOCATION = "us-central1";
+  static KEY_FILE_PATH = "./secrets/secret.json";
   static CLOUD_STORAGE_BUCKET = "";
 }
 
 export class UberEat {
-  static SHOP_BQ_DATASET = "ubereat_shop";
+  static SHOP_BQ_DATASET = "test_ds";
   static SHOP_BQ_SCHEMA = [
     { name: "uuid", type: "string" },
     { name: "title", type: "string" },
@@ -42,5 +42,4 @@ export class UberEat {
       type: "timestamp",
     },
   ];
-  static SHOP_JSON_CS_DIR = "ubereat/shopLst/json";
 }

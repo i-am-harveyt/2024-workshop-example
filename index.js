@@ -119,9 +119,7 @@ export default async function getNearShop(lat, lng, saveJson, bigqueryClient) {
       await bigqueryClient
         .dataset(UberEat.SHOP_BQ_DATASET)
         .table(`${today.getFullYear()}-${today.getMonth() + 1}`)
-        .insert(insertData, {
-          schema: UberEat.SHOP_BQ_SCHEMA,
-        });
+        .insert(insertData, { schema: UberEat.SHOP_BQ_SCHEMA });
       console.log(`Add ${items.length} shops`);
     } catch (e) {
       console.error(e.toString());
@@ -129,7 +127,6 @@ export default async function getNearShop(lat, lng, saveJson, bigqueryClient) {
     }
   }
 }
-
 
 const bigqueryClient = new BigQuery({
   projectId: Cloud.PROJECT_ID,
